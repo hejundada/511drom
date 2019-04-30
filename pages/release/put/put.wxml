@@ -1,0 +1,37 @@
+<!--pages/release/put/put.wxml-->
+<view class='container'>
+
+      <view class='put'>
+            <view class='puttextarea'>
+                  <textarea placeholder='发布内容...' bindinput='userInput' maxlength='500'></textarea>
+                  <text class="counter">{{length}}/500</text>
+            </view>
+            <view class='putimg'>
+
+                  <!-- 添加图片按钮  -->
+                  <view class="question-images-tool" wx:if="{{images.length < 3}}">
+                       <button type="default" size="mini" bindtap="chooseImage">+</button>
+                  </view>
+
+                  <!-- 图片缩略图  -->
+                  <view class="question-images">
+                      <block wx:for="{{images}}" wx:key="*this">
+                          <view class="q-image-wrap">
+                              <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+                              <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">X</view>
+                          </view>
+                      </block>
+                  </view>
+
+            </view>
+            <view class='putindex' bindtap="putindex">
+                  <view class='t1'>发布类型</view>
+                  <text class='t2'>{{puttype}}</text>
+                  <view class='jiantou'>
+                        <image src='../../../image/myright.png'></image>
+                  </view>
+            </view>
+            <button class="submitbtn" bindtap="submitForm">发布帖子</button>
+      </view>
+
+</view>

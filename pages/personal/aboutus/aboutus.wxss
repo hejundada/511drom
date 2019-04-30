@@ -1,0 +1,142 @@
+/* pages/wode/aboutus/aboutus.wxss */
+
+.aboutus-con{
+     background-color: #f5f5f5;
+     width: 100%;
+     height: 100%; 
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+}
+
+.aboutus-top1{
+     width: 100%;
+     height: 580rpx;
+     background-color: #fff;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 20rpx;
+}
+
+.aboutus-top11{
+    margin: 0rpx 48rpx;
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.aboutus-top11 image{
+    width: 148rpx;
+    height: 148rpx;
+    margin-top: 110rpx;
+}
+
+.aboutus-top11 .t1{
+     font-size: 28rpx;
+     color: #737373;
+     margin-top: 30rpx;
+}
+
+.aboutus-top11 .t2{
+     font-size: 24rpx;
+     color: #666666;
+     margin-top: 40rpx;
+     line-height: 40rpx;
+     text-align: justify;
+}
+
+.aboutus-top2{
+     width: 100%;
+    border-bottom: 1rpx solid #e1e6e5;
+    background-color: #fff;
+}
+
+.aboutus-top2 .aboutus-top21{
+     position: relative;
+    display: flex;
+    margin-left: 25rpx;
+    height: 100rpx;
+    align-items: center; 
+}
+
+.aboutus-top21 image{
+     width: 48rpx;
+     height: 48rpx;
+}
+
+.aboutus-top21 .t1{
+     font-size: 28rpx;
+    color: #666666;
+    margin-left: 20rpx;
+}
+
+.aboutus-top21 .aboutus-top22{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin-right: 40rpx;
+}
+
+.aboutus-top22 .t2{
+     font-size: 24rpx;
+     color: #979999;
+     margin-left: 430rpx;
+}
+
+.aboutus-top22 .aboutus-btn{
+    position: absolute;
+    width: 16rpx;
+    height: 28rpx;
+    right: 20rpx;
+    top: 36rpx;
+    display: flex;
+    align-items: center;
+}
+
+.aboutus-top22 .aboutus-btn image{
+    width: 100%;
+    height: 100%;
+} 
+
+.aboutus-top3{
+     width: 100%;
+    border-bottom: 1rpx solid #e1e6e5;
+    background-color: #fff;
+}
+
+.aboutus-top3 .aboutus-top31{
+     position: relative;
+    display: flex;
+    margin-left: 25rpx;
+    height: 100rpx;
+    align-items: center; 
+}
+
+.aboutus-top31 image{
+     width: 48rpx;
+     height: 48rpx;
+}
+
+.aboutus-top31 .t1{
+     font-size: 28rpx;
+    color: #666666;
+    margin-left: 20rpx;
+}
+
+.aboutus-top31 .t3{
+    position: absolute;
+    font-size: 24rpx;
+    color: #ebb843;
+    right: 40rpx;
+}
+
+.aboutus-top31 .t2{
+    position: absolute;
+    font-size: 24rpx;
+    color: #999999;
+    right: 40rpx;
+}
+
+

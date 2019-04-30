@@ -1,0 +1,282 @@
+<!--pages/circle/circle.wxml-->
+<view class='container'>
+
+      <scroll-view scroll-x="true" class='scroll'>
+          <!-- tab -->
+          <view class="tab">
+                <view class="tab-nav">
+                    <view class='tab-nav-list'  wx:for="{{tabnav.tabitem}}" wx:key="*this" bindtap="setTab"  data-tabindex="{{index}}" style="{{index>4?'border-bottom: 1rpx solid #e5e5e5;':''}}">{{item.text}}</view>
+                    <view>
+                           <view class="tab-line" style="width:{{100/tabnav.tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+                    </view>
+                </view>
+          </view>
+      </scroll-view>
+
+      <view class='infor-null' wx:if="{{inforList == null || inforList.length == 0}}">
+             <image src="../../image/icon_null.png"/>
+             <view class='hint'>你发现了一块废墟，快去开拓吧！</view>
+             <button bindtap='goput'>马上发布</button>
+      </view>
+
+      <block wx:else>
+             <block wx:if="{{showtab==0}}">
+                   <view class='circle-list'>
+                         <block wx:for="{{inforList}}" wx:key="*this">
+                         <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 2}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==1}}">
+                   <view class='circle-list'>
+                         <block wx:for="{{inforList}}" wx:key="*this">
+                         <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index'>
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==2}}">
+                   <view class='circle-list'>
+                          <block wx:for="{{inforList}}" wx:key="*this">
+                          <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 3}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==3}}">
+                   <view class='circle-list'>
+                          <block wx:for="{{inforList}}" wx:key="*this">
+                          <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 4}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==4}}">
+                   <view class='circle-list'>
+                          <block wx:for="{{inforList}}" wx:key="*this">
+                          <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 5}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==5}}">
+                   <view class='circle-list'>
+                          <block wx:for="{{inforList}}" wx:key="*this">
+                          <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 6}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==6}}">
+                   <view class='circle-list'>
+                          <block wx:for="{{inforList}}" wx:key="*this">
+                          <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 7}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==7}}">
+                   <view class='circle-list'>
+                          <block wx:for="{{inforList}}" wx:key="*this">
+                          <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 8}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==8}}">
+                   <view class='circle-list'>
+                          <block wx:for="{{inforList}}" wx:key="*this">
+                          <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 9}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==9}}">
+                   <view class='circle-list'>
+                          <block wx:for="{{inforList}}" wx:key="*this">
+                          <navigator url='circle-detail/circle-detail?id={{articleid}}'>
+                                <view class='list-index' wx:if="{{item.tabid == 10}}">
+                                      <view class='list-people'>
+                                            <image src="{{item.avatar}}" />
+                                            <text>{{item.nickname}}</text>
+                                      </view>
+                                      <text class="list-content">{{item.content}}</text>
+                                      <image class="list-image" src="{{item.postImg}}" mode="aspectFill" />
+                                      <view class="list-like">
+                                            <image src="../../image/wxview.png" />
+                                            <text>{{item.readingNum}}</text>
+                                            <image src="../../image/wxmessage.png"></image>
+                                            <text>{{item.commentNum}}</text>
+                                            <image src="../../image/wxlike.png"></image>
+                                            <text>{{item.likeNum}}</text>
+                                            <text class='senddata'>{{item.time}}</text>
+                                      </view>
+                                </view>
+                         </navigator>
+                         </block>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==10}}">
+                   <view class='infor-null'>
+                         <image src="../../image/icon_null.png"/>
+                         <view class='hint'>其他模块正在调研中，请耐心等待！</view>
+                   </view>
+             </block>
+      </block>
+
+
+</view>

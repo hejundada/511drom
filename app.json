@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/logins/logins",
+    "pages/personal/personal",
+    "pages/personal/mybean/mybean",
+    "pages/personal/signin/signin",
+    "pages/release/release",
+    "pages/release/puttype/puttype",
+    "pages/release/put/put",
+    "pages/circle/circle",
+    "pages/circle/circle-detail/circle-detail",
+    "pages/news/news",
+    "pages/personal/aboutus/aboutus",
+    "pages/shop/shop",
+    "pages/shop/shop-details/shop-details",
+    "pages/shop/shop-details/evaluate/evaluate"
+  ],
+  "window": {
+    "backgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#51bdb0",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#51bdb0",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/circle/circle",
+        "iconPath": "image/a1.png",
+        "selectedIconPath": "image/a2.png",
+        "text": "社交圈"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "iconPath": "image/c1.png",
+        "selectedIconPath": "image/c2.png",
+        "text": "腰豆商城"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "iconPath": "image/d1.png",
+        "selectedIconPath": "image/d2.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "image/b1.png",
+        "selectedIconPath": "image/b2.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "image/e1.png",
+        "selectedIconPath": "image/e2.png",
+        "text": "我的树洞"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "debug": true
+}

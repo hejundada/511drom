@@ -1,0 +1,26 @@
+<!--pages/logins/logins.wxml-->
+<view class='container'>
+
+      <view class='logins-logo'>
+            <image class='im1' src='/image/logo.png'></image>
+      </view>
+      <view class='logins-userpass'>
+            <form bindsubmit="formSubmit">
+                  <view class='username'>
+                        <label class="{{focus1==true?'username-top':'username-bottom'}}">学号</label>
+                        <input type='text' name="userName" maxlength="11" bindinput="userPhoneInput" bindfocus="userfocus" bindblur="userblur" focus="{{focus1}}"></input>
+                        <text>{{hintphone}}</text>
+                  </view>
+                  <view class='password'>
+                        <label class="{{focus2==true?'password-top':'password-bottom'}}">密码</label>
+                        <input type='password' name="password" bindinput="passWdInput" bindfocus="passfocus" bindblur="passblur" focus="{{focus2}}"></input>
+                        <text>{{hintpass}}</text>
+                  </view>
+            </form>
+      </view>
+      <view class='logins-submit'>
+            <button bindtap="loginBtnClick" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+            <view class='submit-hint'>{{hintinfo}}</view>
+      </view>
+
+</view>

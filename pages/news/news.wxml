@@ -1,0 +1,68 @@
+<!--pages/news/news.wxml-->
+<view class='container'>
+
+      <scroll-view scroll-x="true" class='scroll'>
+          <!-- tab -->
+          <view class="tab">
+                <view class="tab-nav">
+                    <view class='tab-nav-list'  wx:for="{{tabnav.tabitem}}" wx:key="*this" bindtap="setTab"  data-tabindex="{{index}}">{{item.text}}</view>
+                    <view>
+                           <view class="tab-line" style="width:{{100/tabnav.tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+                    </view>
+                </view>
+          </view>
+      </scroll-view>
+
+      <view class='infor-null' wx:if="{{inforList == null || inforList.length == 0}}">
+             <image src="../../image/icon_null.png"/>
+             <view class='hint'>你这里一片虚无，快去社交吧！</view>
+             <button bindtap='goto'>马上入圈</button>
+      </view>
+
+      <block wx:else>
+             <block wx:if="{{showtab==0}}">
+                   <view class='news-list'>
+                         <view class='news-listone' wx:for="{{inforList}}" wx:key="*this">
+                               <view class='listone-con'>
+                                     <view class='img-left'>
+                                          <image src='{{item.img}}'></image>
+                                     </view>
+                                     <view class='text-right'>
+                                          <view class='text-right-top'>
+                                                <text class='name'>{{item.username}}</text>
+                                                <text class='time'>{{item.time}}</text>
+                                          </view>
+                                          <view class='text-right-bottom'>
+                                                <text class='con'>{{item.content}}</text>
+                                                <text class='num' style="display: {{item.num>0?'block':'none'}};">{{item.num}}</text>
+                                          </view>
+                                     </view>
+                               </view>
+                         </view>
+                   </view>
+             </block>
+             <block wx:if="{{showtab==1}}">
+                   <view class='news-list'>
+                         <view class='news-listone' wx:for="{{inforList2}}" wx:key="*this">
+                               <view class='listone-con'>
+                                     <view class='img-left'>
+                                          <image src='{{item.img}}'></image>
+                                     </view>
+                                     <view class='text-right'>
+                                          <view class='text-right-top'>
+                                                <text class='name'>{{item.username}}</text>
+                                                <text class='time'>{{item.time}}</text>
+                                          </view>
+                                          <view class='text-right-bottom'>
+                                                <text class='con'>{{item.content}}</text>
+                                                <text class='num' style="display: {{item.num>0?'block':'none'}};">{{item.num}}</text>
+                                          </view>
+                                     </view>
+                               </view>
+                         </view>
+                   </view>
+             </block>
+      </block>
+
+
+</view>

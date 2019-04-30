@@ -1,0 +1,16 @@
+<!--pages/release/release.wxml-->
+<view class="release">
+      <view class="title">发布动态</view>
+      <view class="border"></view>
+      <view class="release-list" bindtouchend="moveItem" bindtouchstart="moveStart">
+          <block wx:for="{{xinList}}" wx:key="key" wx:for-index="idx">
+                <view class="single" style="opacity:{{item.display}};transform: translateX({{item.slateX}}) scale({{item.scale}});z-index:{{item.zIndex}};transform-origin: 100% 50% 0;{{item.style}}">
+                    <image src='../../image/circle.png'></image>
+                    <view class="release-shou">{{item.title}}</view>
+                    <view class="release-body">{{item.msg}}</view>
+                    <view class="release-xie" bindtap='puttext'>去发布  >></view>
+                </view>
+          </block>
+      </view>
+</view>
+

@@ -1,0 +1,155 @@
+/* pages/circle/circle.wxss */
+.container .scroll{
+    width: 100%;
+    white-space:nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 2000;
+}
+.scroll .tab{
+    display: flex;
+    flex-direction: column;
+}
+.scroll .tab .tab-nav{
+    height: 80rpx;
+    background: #fff;
+    border-bottom: 1rpx solid #e5e5e5;
+    display: flex;
+    line-height: 79rpx;
+    position: relative;
+    font-size: 26rpx;
+}
+.tab-nav .tab-nav-list{
+    min-width:20%;
+    max-width:20%;
+    text-align:center;
+    height: 80rpx;
+} 
+.tab-nav .tab-line{
+    position: absolute;
+    left: 0;
+    bottom: -1rpx;
+    height: 4rpx;
+    background: #51bdb0;
+    transition: all 0.3s;
+}
+.container .infor-null{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 180rpx;
+}
+
+.container .infor-null image{
+    width: 354rpx;
+    height: 354rpx;
+}
+
+.container .infor-null .hint{
+    font-size: 32rpx;
+    margin-top: 20rpx;
+    color: #999;
+}
+
+.container .infor-null button{
+    width: 220rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    background-color: #51bdb0;
+    margin-top: 50rpx;
+    font-size: 28rpx;
+    color: #fff;
+    border-radius: 10rpx;
+}
+
+.circle-list{
+    margin-top: 80rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.circle-list .list-index{
+    flex-direction:column;
+    display:flex;
+    margin:20rpx 0 20rpx;
+    background-color:#fff;
+    border-bottom:1px solid #ededed;
+    border-top:1px solid #ededed;
+    padding-bottom:5px;
+}
+
+.list-index .list-people{
+    margin:10rpx 0 20rpx 10px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.list-people image{
+    width:80rpx;
+    height:80rpx;
+    border-radius: 50%;
+}
+
+.list-people text{
+    font-size:32rpx;
+    font-family:Microsoft YaHei;
+    color:#333; 
+    margin-left: 20rpx;
+}
+
+.list-index .list-content{
+    color:#666;
+    font-size:26rpx;
+    margin-bottom:20rpx;
+    margin-left:20rpx;
+    margin-right: 10rpx;
+    letter-spacing:2rpx;
+    line-height:40rpx;   
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+}
+
+.list-index .list-image{
+    width:100%;
+    height:340rpx;
+    margin-bottom:10px;
+}
+
+.list-index .list-like{
+    display:flex;
+    flex-direction:row;
+    font-size:13px;
+    line-height:20px;
+    margin-left:10px;
+    margin-bottom: 10rpx;
+    align-items:center;
+    position: relative;
+}
+
+.list-index .list-like image{
+    height:16px;
+    width:16px;
+    margin-right:8px;
+}
+
+.list-index .list-like text{
+    font-size:24rpx;
+    font-family:Microsoft YaHei;
+    color:#666;
+    margin-right: 20rpx;
+}
+
+.list-index .list-like .senddata{
+    position: absolute;
+    right: 0px;
+}

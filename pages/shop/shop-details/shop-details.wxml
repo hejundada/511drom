@@ -1,0 +1,137 @@
+<!--pages/shop/shop-details/shop-details.wxml-->
+<view class='container'>
+  <view class='banner-box'>
+    <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="#ffffff">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='shop-details'>
+    <view class='shop-con'>
+      <view class='shop-name'>
+        <view class='shop-text-right'>
+          <image src='../../../image/wode7.png'></image>
+          <text>50</text>
+        </view>
+        
+      </view>
+      <view class='shop-introduce'>CONVERSE匡威官方 CHUCK 70 GORE-TEX 高帮 162347C</view>
+      <view class='shop-introduce2'>
+        <view>快递包邮</view>
+        <view>月兑换量：50</view>
+        <view>深圳</view>
+      </view>
+    </view>
+  </view>
+  <view class='shop-details'>
+    <view class='shop-cons' bindtap='showModal'>
+      <view class='shop-cons-box1'>
+        <view class='text1'>选择</view>
+        <view class='text2'>请选择颜色/尺码</view>
+      </view>
+      <view class='select-img'>
+        <image src='../../../image/into.png'></image>
+      </view>
+    </view>
+    <view class='shop-cons' bindtap="showModulArgument">
+      <view class='shop-cons-box1'>
+        <view class='text1'>参数</view>
+        <view class='text2'>品牌...</view>
+      </view>
+      <view class='select-img'>
+        <image src='../../../image/into.png'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 评价 -->
+  <view class='shop-details'>
+    <view class='shop-cons-evaluate'>
+      <view class='text1'>商品评价(12)</view>
+      <view class='select-img' bindtap='view_evaluate'>
+        <text>查看全部</text>
+        <image src='../../../image/into.png'></image>
+      </view>
+    </view>
+    <view class='evaluate-content'>
+      <view class='member'>
+        <image src='../../../image/people3.png'></image>
+        <text>超级会员</text>
+      </view>
+      <view class='con-text'>一次买了3双，非常喜欢，颜色和图片一样的！</view>
+      <view class='con-text2'>2018-12-16 颜色分类:红色354195C;尺码:33[内长21cm,脚长20cm]</view>
+    </view>
+  </view>
+
+  <!-- 商品参数弹窗 -->
+  <view class="commodity_screen" bindtap="hideModulArgument" wx:if="{{showModulArgument}}" catchtouchmove="ture"></view>
+  <!-- 弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModulArgument}}" catchtouchmove="ture">
+    <view class='shop-con2'>
+      <view class='infor-headline'>基本信息</view>
+      <view class='infor-list-text'><view class='text-left'>品牌</view><view class='text-right'>匡威</view></view>
+      <view class='infor-list-text'><view class='text-left'>适用季节</view><view class='text-right'>春/夏/秋</view></view>
+      <view class='infor-list-text'><view class='text-left'>吊牌价</view><view class='text-right'>50</view></view>
+      <view class='infor-list-text'><view class='text-left'>是否瑕疵</view><view class='text-right'>否</view></view>
+      <view class='infor-list-text'><view class='text-left'>上市时间</view><view class='text-right'>2019/4/2</view></view>
+    </view>
+    <view class='infor-button {{isIphoneX ? "isIphone":""}}' bindtap="hideModulArgument">确认</view>
+  </view>
+  <!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}" catchtouchmove="ture"></view>
+  <!-- 选择弹出框  -->
+  <!--  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}" catchtouchmove="ture">
+    <view class='shop-con2'>
+      <view class='con2-img'>
+          <image class='img1' src='../../../image/post-3.jpg'></image>
+        <view class='img2-box'>
+          <view>
+            <view class='box-price'><text>价格：{{price}}</text><image src='../../../image/wode7.png'></image></view>
+            <view>库存：500</view>
+          </view>
+          <view class='close' bindtap="hideModal">X</view>
+        </view>
+      </view>
+      <view class='shop-color'>
+        <view class='line'></view>
+        <view class='color-headeline'>请选择颜色</view>
+        <view class='color-select'>
+          <view class='select-box {{index === color ? "select-color":""}}' wx:for="{{shopcolor}}" wx:key="*this" data-tabindex="{{index}}" bindtap='colorSelect'>{{item.color}}</view>
+        </view>
+      </view>
+      <view class='shop-color'>
+        <view class='line'></view>
+        <view class='color-headeline'>请选择尺码</view>
+        <view class='color-select'>
+          <view class='select-box {{index === size ? "select-color":""}}' wx:for="{{shopsize}}" data-tabindex="{{index}}" bindtap='sizeSelect' wx:key="*this" >{{item.size}}</view>
+        </view>
+      </view>
+      <view class='shop-color'>
+        <view class='line'></view>
+        <view class='shop-num'>
+          <text class='head-num'>请选择数量</text>
+          <view class="stepper">  
+            <text class="{{minusStatus}} text" bindtap="bindMinus">-</text>
+            <input type="number" bindchange="bindManual" value="{{num}}" />
+            <text class="normal text" bindtap="bindPlus">+</text>
+          </view>
+        </view>
+        <view class='line'></view>
+        <!-- 总价 -->
+        <view class='shop-price'>
+          <view></view>
+          <view class='price-right {{isIphoneX ? "isIphone":""}}' >
+            <text>总价：</text>
+            <text>{{totalPrice}}</text>
+            <image src='../../../image/wode7.png'></image>
+            <view class='submit' catchtap='price'>结算</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

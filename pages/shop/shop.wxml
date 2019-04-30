@@ -1,0 +1,98 @@
+<!--pages/shop/shop.wxml-->
+<view class='container'>
+  <view class='banner-box'>
+    <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="#ffffff">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='shop-list'>
+    <view class='shop-list-con'>
+      <view class='list-box'>
+        <image src='../../image/list.jpg'></image>
+        <text>生活用品</text>
+      </view>
+      <view class='list-box'>
+        <image src='../../image/list.jpg'></image>
+        <text>文具用品</text>
+      </view>
+      <view class='list-box'>
+        <image src='../../image/list.jpg'></image>
+        <text>鲜花绿植</text>
+      </view>
+      <view class='list-box'>
+        <image src='../../image/list.jpg'></image>
+        <text>话费流量</text>
+      </view>
+      <view class='list-box'>
+        <image src='../../image/people4.png'></image>
+        <text>外卖配送</text>
+      </view>
+      <view class='list-box'>
+        <image src='../../image/list.jpg'></image>
+        <text>影视vip</text>
+      </view>
+    </view>
+  </view>
+  <view class='shop-center-type'>
+    <view class='shop-tab'>
+      <view class='tab-item' wx:for="{{tabnav.tabitem}}" wx:key="*this" data-tabindex="{{index}}" bindtap='switchTab'>{{item.name}}</view>
+        <view class="tab-line" style="width:{{100/tabnav.tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+    </view>
+    <block>
+      <block wx:if="{{showtab==0}}">
+
+        <view class='content-shop'>
+          <view class="content">
+            <view class="left">
+              <block wx:for="{{note}}" wx:key="*this">
+                <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+              </block>
+            </view>
+            <view class="right">
+              <block wx:for="{{note}}" wx:key="*this">
+                <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+              </block>
+            </view>
+          </view>
+        </view>
+        <!--  下面是一个模块 -->
+        <template name="item">
+          <view class="item" data-tabindex="{{index}}">
+            <view catchtap='viewdetails'>
+              <!-- mode 宽度不变，高度自动变化，保持原图宽高比不变 -->
+              <image class="item-img" src="{{url}}" mode="widthFix"></image>
+              <view class="item-title-box">
+                <view class="item-title">{{title}}</view>
+              </view>
+            </view>
+            <view class="name">
+              <image class="item-ava" src="../../image/wxlike.png" catchtap='isLike'></image>
+              <!-- <image wx:else class="item-ava" src="../../image/like-sel.png" bindtap='isLike'></image>     -->
+              <text class="name-title">{{like_num}}</text>
+              <view class="heart_">
+                <view>
+                  <image class="heart" src="../../image/wode7.png"></image>
+                </view>
+                <text>{{money_num}}</text>
+              </view>
+            </view>
+          </view>
+        </template>
+      </block>
+      <block wx:if="{{showtab==1}}">
+        <view>邀请福利</view>
+      </block>
+      <block wx:if="{{showtab==2}}">
+        <view>已付款</view>
+      </block>
+      <block wx:if="{{showtab==3}}">
+        <view>物流中心</view>
+      </block>
+    </block>
+  </view>
+
+</view>

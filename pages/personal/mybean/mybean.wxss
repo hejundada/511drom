@@ -1,0 +1,50 @@
+/* pages/personal/mybean/mybean.wxss */
+.mybean{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mybean .mybean-list{
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #fff;
+  margin-bottom:10rpx;
+}
+
+.mybean-list .mybean-listcon{
+  width: 92%;
+  height: 90rpx;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mybean-listcon .t1{
+  font-size: 28rpx;
+  color: #666;
+}
+
+.mybean-listcon .change{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mybean-listcon .change .t2{
+  font-size: 28rpx;
+  color: #999;
+}
+
+.mybean-listcon .change .t3{
+  font-size: 28rpx;
+  color: green;
+}
+
+.mybean-listcon .change image{
+  width: 33rpx;
+  height: 30rpx;
+}

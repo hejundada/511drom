@@ -1,0 +1,142 @@
+/* pages/release/put/put.wxss */
+.put{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.put .puttextarea{
+  width: 92%;
+  height: 400rpx;
+  margin:20rpx auto;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  position: relative;
+  background-color: #fff;
+}
+.puttextarea textarea{
+  width: 95%;
+  height: 300rpx;
+  font-size: 32rpx;
+  color: #666;
+  padding: 20rpx 20rpx;
+}
+.puttextarea .counter{
+  position: absolute;
+  right: 20rpx;
+  bottom: 10rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.put .putimg{
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  margin:20rpx auto;
+}
+
+.question-images-tool {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+}
+
+.question-images-tool button{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  line-height: 200rpx !important;
+  padding: 0;
+  font-size: 80rpx;
+  color: #999;
+}
+
+.question-images {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.q-image-wrap {
+  width: 30%;
+  margin-right: 3%;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.q-image-wrap .q-image {
+  flex: 1;
+  height: 200rpx;
+  width: 100%;
+}
+
+.q-image-wrap .q-image-remover {
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #888;
+  border-radius: 50px;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+
+.put .putindex{
+  width: 92%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin:20rpx auto;
+  border-bottom: 1rpx solid #e6e6e6;
+  background-color: #fff;
+  position: relative;
+}
+
+.put .putindex .t1{
+  font-size: 30rpx;
+  color: #666;
+}
+
+.put .putindex .t2{
+  font-size: 30rpx;
+  color: #999;
+  position: absolute;
+  right: 50rpx;
+}
+
+.put .putindex .jiantou{
+  position: absolute;
+  width: 16rpx;
+  height: 28rpx;
+  right: 20rpx;
+  top: 26rpx;
+  display: flex;
+  align-items: center;
+} 
+
+.put .putindex .jiantou image{
+    width: 100%;
+    height: 100%;
+} 
+
+.put .submitbtn{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 50rpx;
+  border: none !important;
+  margin-top: 80rpx;
+  margin-bottom: 140rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background: linear-gradient(to right, #50bcac , #69e0ce);
+}

@@ -1,0 +1,234 @@
+/* pages/circle/circle-detail/circle-detail.wxss */
+.circle-detail{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin:0rpx 0 20rpx;
+  background-color:#fff;
+  border-bottom:1px solid #ededed;
+  padding-bottom:5px;
+}
+
+.circle-detail .detail-people{
+  margin:20rpx 20rpx 20rpx 10px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  position: relative;
+}
+
+.detail-people .header{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+}
+
+.detail-people .nametime{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.detail-people .nametime .t1{
+  font-size:32rpx;
+  font-family:Microsoft YaHei;
+  color:#333; 
+}
+
+.detail-people .nametime .t2{
+  font-size:28rpx;
+  font-family:Microsoft YaHei;
+  color:#666; 
+  margin-top: 5rpx;
+}
+
+.detail-people .followtip{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  right: 0rpx;
+}
+
+.detail-people .followtip image{
+  height:16px;
+  width:16px;
+  margin-left:30rpx;
+}
+
+.detail-people .followtip .t1{
+  font-size:28rpx;
+  font-family:Microsoft YaHei;
+  color:#666; 
+  margin-left: 8rpx;
+}
+
+.circle-detail .list-content{
+    color:#666;
+    font-size:26rpx;
+    margin-bottom:20rpx;
+    margin-left:20rpx;
+    margin-right: 10rpx;
+}
+
+.circle-detail .list-image{
+    width:100%;
+    height:340rpx;
+    margin-bottom:10px;
+}
+
+.circle-detail .list-like{
+    display:flex;
+    flex-direction:row;
+    font-size:13px;
+    line-height:20px;
+    margin-left:10px;
+    margin-bottom: 10rpx;
+    align-items:center;
+    position: relative;
+}
+
+.circle-detail .list-like image{
+    height:16px;
+    width:16px;
+    margin-right:8px;
+}
+
+.circle-detail .list-like text{
+    font-size:24rpx;
+    font-family:Microsoft YaHei;
+    color:#666;
+    margin-right: 20rpx;
+}
+
+.circle-detail .list-like .senddata{
+    position: absolute;
+    right: 0px;
+}
+
+.detail-comment{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin:0rpx 0 150rpx;
+  background-color:#fff;
+  border-bottom:1px solid #ededed;
+}
+
+.detail-comment .comment-title{
+  margin:20rpx 20rpx 20rpx 10px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  border-left: 4px solid #51bdb0;
+}
+
+.comment-title text{
+  font-size:32rpx;
+  font-family:Microsoft YaHei;
+  color:#333;
+  margin-left: 20rpx;
+}
+
+.detail-comment .comment-list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-list .comment-index{
+  width: 100%;
+  margin:20rpx 0 20rpx;
+  border-bottom:1px solid #ededed;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-index .comment-index-img{
+  margin:10rpx 0 20rpx 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment-index-img image{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50%;
+}
+
+.comment-index-img text{
+  font-size:32rpx;
+  font-family:Microsoft YaHei;
+  color:#333; 
+  margin-left: 20rpx;
+}
+
+.comment-index .comment-index-content{
+  color:#666;
+  font-size:26rpx;
+  margin-bottom:20rpx;
+  margin-left:20rpx;
+  margin-right: 20rpx;
+  line-height: 20px;
+}
+
+.comment-index .comment-reply{
+  background-color:#ededed;
+  margin-bottom:20rpx;
+  margin-left:20rpx;
+  margin-right: 20rpx;
+  padding: 10rpx 0rpx;
+}
+
+.comment-index .comment-reply .t1{
+  color: #51bdb0;
+  font-size:26rpx;
+  line-height: 20px;
+}
+
+.comment-index .comment-reply .t2{
+  color: #666;
+  font-size:26rpx;
+  line-height: 20px;
+}
+
+.comment-index .comment-index-like{
+  display:flex;
+  flex-direction:row;
+  font-size:13px;
+  width: 100%;
+  height: 30px;
+  line-height:30px;
+  margin-left:10px;
+  align-items:center;
+  position: relative;
+}
+
+.comment-index-like .senddata{
+  position: absolute;
+  left: 0px;
+  color: #666;
+}
+
+.comment-index-like .index-like-right{
+  position: absolute;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.index-like-right image{
+  height:16px;
+  width:16px;
+  margin-right:8px;
+}
+
+.index-like-right text{
+  font-size:24rpx;
+  font-family:Microsoft YaHei;
+  color:#666;
+  margin-right: 20rpx;
+}

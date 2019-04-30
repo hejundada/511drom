@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#51bdb0",
+  "navigationBarTitleText": "社交圈",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

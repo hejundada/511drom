@@ -1,0 +1,15 @@
+<!--pages/release/puttype/puttype.wxml-->
+<view class='container'>
+
+      <view class='puttype'>
+             <view class='puttype-list' wx:for="{{tabitem}}" wx:key="*this" bindtap="choice" data-id="{{item.id}}">
+                    <view class='puttype-list-con'>
+                          <text>{{item.text}}</text>
+                          <view class='hint'>
+                                <image src='../../../image/myright.png'></image>
+                          </view>
+                    </view>
+             </view>
+      </view>
+
+</view>

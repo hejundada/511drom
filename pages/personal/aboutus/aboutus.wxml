@@ -1,0 +1,49 @@
+<!--pages/wode/aboutus/aboutus.wxml-->
+
+<view class='aboutus-con'>
+
+       <view class='aboutus-top1'>
+              <view class='aboutus-top11'>
+                     <image src='../../../image/logo.png'></image>
+                     <text class='t1'>511Dorm</text>
+                     <text class='t2'>511宿舍是一款社交圈+打赏+商城的小程序，它帮助全国每个校区都有属于自己的小天地，用户可以在校区的社交圈进行交流沟通，或进行打赏，打赏的腰豆可以在商城兑换商品，快邀请朋友加入进来吧...</text>
+              </view>
+       </view>
+
+       <view class='aboutus-top2'>
+       
+                <view class='aboutus-top21'>
+                      <image src='../../../image/gywm1.png'></image>
+                      <text class='t1'>版本更新</text>
+                      <view class='aboutus-top22'>
+                           <text class='t2'>V1.0</text>
+                           <view class='aboutus-btn'>
+                                 <image src='../../../image/myright.png'></image>
+                           </view>
+                      </view>
+                </view>  
+
+       </view>
+
+       <view class='aboutus-top3'>
+       
+                <view class='aboutus-top31'>
+                      <image src='../../../image/gywm2.png'></image>
+                      <text class='t1'>联系我们</text>
+                      <text class='t3'>18373162906</text>
+                </view>  
+
+       </view>
+
+       <view class='aboutus-top3'>
+       
+                <view class='aboutus-top31'>
+                      <image src='../../../image/gywm3.png'></image>
+                      <text class='t1'>QQ</text>
+                      <text class='t2'>2624774372</text>
+                </view>  
+
+       </view>
+
+
+</view>

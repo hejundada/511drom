@@ -1,0 +1,63 @@
+<!--pages/personal/personal.wxml-->
+<view class='wode-con'>
+ 
+       <view class='wode-top1'>
+              <image class='im1' src='../../image/wode0.png'></image>
+              <view class='wode-top11'>
+                   <view class='wode-top111'>
+                     <image class='im2' src="{{userInfo.avatarUrl}}"></image>
+                   </view>
+              </view>
+              <text class='t1'>{{userInfo.nickName}}</text>
+              <text class='t2'>{{userInfo.country}}-{{userInfo.city}}</text>
+              <view class='personal-three'>
+                    <view class='one-mode'>
+                           <text class='num'>12</text>
+                           <text class='name'>文章</text>
+                    </view>
+                    <view class='one-mode'>
+                           <text class='num'>7</text>
+                           <text class='name'>关注</text>
+                    </view>
+                    <view class='one-mode'>
+                           <text class='num'>18</text>
+                           <text class='name'>粉丝</text>
+                    </view>
+              </view>
+       </view>
+
+        <view class='wode-top3'>
+            <view wx:for="{{cache}}" wx:key="{{index}}">
+                <view class='wode-top31' bindtap='{{item.tap}}'>
+                      <image class='im1' src='{{item.iconurl}}'></image>
+                      <text class='t1'>{{item.title}}</text>
+                      <view class='red'></view>
+                      <view class='wode-top32'>
+                           <image src='../../image/myright.png'></image>
+                      </view>
+                </view>  
+            </view>
+       </view>
+
+       
+        <view class='wode-top3'>
+            <view wx:for="{{device}}" wx:key="{{index}}">
+                <view class='wode-top31' bindtap='{{item.tap}}'>
+                      <image class='im1' src='{{item.iconurl}}'></image>
+                      <text class='t1'>{{item.title}}</text>
+                      <text class='t2'>{{item.hint}}</text>
+                      <view class='wode-top32'>
+                           <image src='../../image/myright.png'></image>
+                      </view>
+                </view>  
+            </view>
+       </view>
+
+       <view class='wode-top4'>
+                <view class='wode-top41'>
+                        <text class='t1'>5</text>
+                </view>
+                <text class='t2'>{{motto}}</text>
+       </view>
+
+</view>

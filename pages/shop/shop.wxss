@@ -1,0 +1,189 @@
+/* pages/shop/shop.wxss */
+
+.container {
+  width: 100%;
+}
+
+.container .swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.container .banner-box {
+  width: 100%;
+  height: 400rpx;
+}
+
+.container .banner-box image {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-list {
+  width: 100%;
+  background-color: #fff;
+}
+
+.shop-list-con {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50rpx 0 0 0;
+}
+
+.shop-list .list-box {
+  width: 33.3%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+
+.shop-list .list-box text {
+  font-size: 30rpx;
+}
+
+.shop-list .list-box image {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+}
+
+.shop-center-type {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.shop-center-type .shop-tab {
+  height: 90rpx;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.tab-line {
+  position: absolute;
+  left: 0;
+  bottom: -1rpx;
+  height: 4rpx;
+  background: #51bdb0!important;
+  transition: all 0.3s;
+}
+
+.shop-center-type .sw-item {
+  height: 100%;
+}
+
+.shop-center-type .shop-tab .tab-item {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+
+.content {
+  margin: 0 20rpx;
+  text-align: justify;
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-shop {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.item {
+  background-color: #fff;
+  margin: 1%;
+  margin-bottom: 20rpx;
+  display: inline-block;
+  border-radius: 20rpx;
+}
+
+.item-ava {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+}
+
+.heart {
+  width: 45rpx;
+  height: 35rpx;
+  margin-right: 8rpx;
+}
+
+.heart_ {
+  display: flex;
+  align-items: center;
+}
+
+.heart_ text {
+  color: #333;
+}
+
+.item-img {
+  width: 100%;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.item-title {
+  font-size: 24rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: #1e1e1e;
+  margin: 15rpx;
+}
+
+.item .name {
+  display: flex;
+  padding: 0 15rpx;
+  margin-top: 20rpx;
+  padding-bottom: 10rpx;
+  align-items: center;
+  font-size: 22rpx;
+  color: #1e1e1e;
+}
+
+.item-title-box {
+  display: flex;
+  position: relative;
+}
+
+.name-title {
+  flex: 1;
+  margin-left: 18rpx;
+  margin-right: 20rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.name text:last-child {
+  flex: 0 0 30rpx;
+  /* text-decoration: underline; */
+  line-height: 10rpx;
+}
+
+.left, .right {
+  width: 49%;
+}
+
+.right {
+  float: right;
+}

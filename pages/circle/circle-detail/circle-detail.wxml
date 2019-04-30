@@ -1,0 +1,77 @@
+<!--pages/circle/circle-detail/circle-detail.wxml-->
+<view class='container'>
+
+      <view class='circle-detail'>
+             <view class='detail-people'>
+                    <image class='header' src="../../../image/people1.png" />
+                    <view class='nametime'>
+                          <text class='t1'>骑蜗牛的小马</text>
+                          <text class='t2'>三小时前来过</text>
+                    </view>
+                    <view class='followtip'>
+                          <image src="../../../image/wxfollow.png" />
+                          <text class='t1'>关注</text>
+                          <image src="../../../image/wxtip.png" />
+                          <text class='t1'>举报</text>
+                    </view>
+             </view>
+             <text class="list-content">本人在二食堂丢失门禁卡，有捡到本人卡的麻烦联系我本人电话：12312341234，万分感谢！</text>
+             <image class="list-image" src="../../../image/post-4.jpg" mode="aspectFill" />
+             <view class="list-like">
+                  <image src="../../../image/wxview.png" />
+                  <text>33</text>
+                  <image src="../../../image/wxmessage.png"></image>
+                  <text>2</text>
+                  <image src="../../../image/wxlike.png"></image>
+                  <text>17</text>
+                  <text class='senddata'>03月18日 17:17</text>
+            </view>
+      </view>
+      <view class='detail-comment'>
+            <view class='comment-title'>
+                  <text>评论</text>
+            </view>
+            <view class='comment-list'>
+                  <view class='comment-index'>
+                        <view class='comment-index-img'>
+                              <image class='header' src="../../../image/people2.png" />
+                              <text>路人甲</text>
+                        </view>
+                        <text class='comment-index-content'>我好像在食堂三号窗口看见了...</text>
+                        <view class="comment-index-like">
+                              <text class='senddata'>03-19 16:17</text>
+                              <view class='index-like-right'>
+                                    <image src="../../../image/wxview.png" />
+                                    <text>3</text>
+                                    <image src="../../../image/wxmessage.png"></image>
+                                    <text>0</text>
+                                    <image src="../../../image/wxlike.png"></image>
+                                    <text>8</text>
+                              </view>
+                        </view>
+                  </view>
+                  <view class='comment-index'>
+                        <view class='comment-index-img'>
+                              <image class='header' src="../../../image/people4.png" />
+                              <text>路人乙和路人丙</text>
+                        </view>
+                        <text class='comment-index-content'>食堂阿姨叫你晚上9点前去食堂领取！不然到时候阿姨们都下班了，你就只能等明天了</text>
+                        <view class='comment-reply'>
+                              <text class='t1'>骑蜗牛的小马：<text class='t2'>谢谢，知道了</text></text>
+                        </view>
+                        <view class="comment-index-like">
+                              <text class='senddata'>03-19 15:10</text>
+                              <view class='index-like-right'>
+                                    <image src="../../../image/wxview.png" />
+                                    <text>7</text>
+                                    <image src="../../../image/wxmessage.png"></image>
+                                    <text>1</text>
+                                    <image src="../../../image/wxlike.png"></image>
+                                    <text>12</text>
+                              </view>
+                        </view>
+                  </view>
+            </view>
+      </view>
+
+</view>

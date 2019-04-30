@@ -1,0 +1,15 @@
+<!--pages/personal/mybean/mybean.wxml-->
+<view class='mybean'>
+
+      <view class='mybean-list' wx:for="{{beanlist}}" wx:key="{{index}}">
+            <view class='mybean-listcon'>
+                  <text class='t1'>{{item.source}}</text>
+                  <view class='change'>
+                        <text class='{{item.type==0?"t2":"t3"}}'>{{item.type==0?'-':'+'}}</text>
+                        <text class='{{item.type==0?"t2":"t3"}}'>{{item.num}}</text>
+                        <image src='../../../image/wode7.png'></image>
+                  </view>
+            </view>
+      </view>
+
+</view>
